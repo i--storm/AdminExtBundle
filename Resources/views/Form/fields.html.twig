@@ -1,0 +1,21 @@
+{% block adminimage_widget %}
+    {% spaceless %}
+        <img class="adminimage" src="{{ base_path }}{{ value }}" width="100">
+    {% endspaceless %}
+{% endblock %}
+
+{% block admingallery_widget %}
+    {% spaceless %}
+        <ul class="admin_gallery sortable" callback_url="{{ path('admin', { action: 'reorderGallery', entity: app.request.query.get('entity') }) }}">
+            {% for image in value %}
+                <li image_id="{{ image.id }}">
+                    <div class="gallery_image_container">
+                        <img class="admin_gallery_image"  src="{{ base_path }}{{ image.path }}" width="100">
+                        <div class="delete_overlay" href="" onclick="window.location.href='{{ path('admin', { action: 'deleteGalleryImage', entity: app.request.query.get('entity'), image_id: image.id, item_id: app.request.query.get('id') } ) }}'">X</div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="crearfix"></div>
+    {% endspaceless %}
+{% endblock %}

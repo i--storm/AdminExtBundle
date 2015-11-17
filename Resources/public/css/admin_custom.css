@@ -1,0 +1,46 @@
+.sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+.sortable li {
+    margin: 3px 3px 3px 0;
+    padding: 1px;
+    float: left;
+    width: 100px;
+    height: 150px;
+    font-size: 4em;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.sortable li img{
+
+}
+
+.crearfix{
+    clear: both;
+}
+
+.gallery_image_container{
+    position: relative;
+}
+
+.delete_overlay{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    color: red;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+body #wrapper {
+    width: auto !important;
+}

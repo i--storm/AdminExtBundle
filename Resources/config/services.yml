@@ -1,0 +1,4 @@
+services:
+#    istorm_admin_ext.example:
+#        class: Istorm\AdminExtBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
