@@ -1,6 +1,6 @@
 <?php
 
-namespace Istorm\AdminExtBundle\Controller;
+namespace Istorm\Bundle\AdminExtBundle\Controller;
 
 use Istorm\ShopBundle\Entity\Item;
 use Istorm\ShopBundle\Entity\ItemGallery;

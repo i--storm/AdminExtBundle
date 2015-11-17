@@ -1,6 +1,6 @@
 <?php
 
-namespace Istorm\AdminExtBundle\DependencyInjection;
+namespace Istorm\Bundle\AdminExtBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

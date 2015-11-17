@@ -1,6 +1,6 @@
 <?php
 
-namespace Istorm\AdminExtBundle\Form;
+namespace Istorm\Bundle\AdminExtBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolver;

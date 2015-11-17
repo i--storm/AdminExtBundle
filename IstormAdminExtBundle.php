@@ -1,6 +1,6 @@
 <?php
 
-namespace Istorm\AdminExtBundle;
+namespace Istorm\Bundle\AdminExtBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
