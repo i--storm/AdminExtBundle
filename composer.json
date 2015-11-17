@@ -15,6 +15,6 @@
         "javiereguiluz/easyadmin-bundle": ">1.0.0"
     },
     "autoload": {
-        "psr-4": { "Istorm\\AdminExtBundle\\": "" }
+        "psr-0": { "Istorm\\AdminExtBundle\\": "" }
     }
 }
