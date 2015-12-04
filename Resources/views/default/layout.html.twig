@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="{{ asset('bundles/istormadminext/css/admin_custom.css') }}">
     {% endblock head_stylesheets %}
 
-{#    <script type="text/javascript" src="/bundles/istormadminext/js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="/bundles/istormadminext/js/tinymce/tinymce.min.js"></script>
     <script type="text/javascript">
         tinymce.init({
             selector: "textarea",
@@ -41,7 +41,7 @@
             editor_deselector : "mceNoEditor",
         });
     </script>
-#}
+
     {% for css_asset in easyadmin_config('design.assets.css') %}
         <link rel="stylesheet" href="{{ asset(css_asset) }}">
     {% endfor %}
