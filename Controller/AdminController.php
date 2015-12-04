@@ -229,4 +229,30 @@ class AdminController extends EasyAdminController
         ));
 
     }
+
+    public function copyAction(){
+
+        $request=$this->request;
+
+        $id=$request->query->get('id');
+
+        $entity_name=$request->query->get('entity');
+
+        $entity_full_name=$this->config['entities'][$entity_name]['class'];
+
+        $entity = $this->em->getRepository($entity_full_name)->find($id);
+
+        $entity_new=clone $entity;
+
+        $this->em->persist($entity_new);
+
+        $this->em->flush();
+
+        return $this->redirectToRoute('admin', array(
+            'action' => 'edit',
+            'entity' => $entity_name,
+            'id' => $entity_new->getId(),
+        ));
+
+    }
 }

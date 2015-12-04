@@ -156,6 +156,11 @@
                                                         {% if _action.icon %}<i class="fa fa-{{ _action.icon }}"></i>{% endif %}
                                                         {{ _action.label|trans(_trans_parameters|merge({ '%entity_id%': _item_id })) }}
                                                     </a>
+                                                {% elseif 'copy' == _action.name %}
+                                                    <a class="{{ _action.css_class|default('') }}" href="{{ _action_href }}" onclick="if(confirm('Copy?')){return true;}else{return false;}">
+                                                        {% if _action.icon %}<i class="fa fa-{{ _action.icon }}"></i>{% endif %}
+                                                        {{ _action.label|trans(_trans_parameters|merge({ '%entity_id%': _item_id })) }}
+                                                    </a>
                                                 {% else %}
                                                     <a class="{{ _action.css_class|default('') }}" href="{{ _action_href }}">
                                                         {% if _action.icon %}<i class="fa fa-{{ _action.icon }}"></i>{% endif %}
