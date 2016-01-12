@@ -2,7 +2,10 @@
 
 namespace Istorm\Bundle\AdminExtBundle\Twig;
 
-class AdminExtension{
+use Twig_Extension;
+
+class AdminExtension extends Twig_Extension
+{
 
     public function getFilters()
     {
