@@ -1,6 +1,6 @@
 services:
     istorm_admin_ext.admin_extension:
-        class: Istorm\AdminExtBundle\Twig\AdminExtension
+        class: Istorm\Bundle\AdminExtBundle\Twig\AdminExtension
         arguments: []
         tags:
             -  { name: twig.extension }
