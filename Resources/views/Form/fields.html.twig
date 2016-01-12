@@ -20,15 +20,3 @@
     {% endspaceless %}
 {% endblock %}
 
-{% block adminjson_widget %}
-    {% spaceless %}
-        <table>
-        {% for key, data in admin_json_decode(value) %}
-            <tr>
-                <td>{{ key }}</td>
-                <td>{{ data }}</td>
-            </tr>
-        {% endfor %}
-        </table>
-    {% endspaceless %}
-{% endblock %}
