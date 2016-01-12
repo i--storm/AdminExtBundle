@@ -19,3 +19,9 @@
         <div class="crearfix"></div>
     {% endspaceless %}
 {% endblock %}
+
+{% block adminjson_widget %}
+    {% spaceless %}
+        {{ admin_json_decode(value) }}
+    {% endspaceless %}
+{% endblock %}

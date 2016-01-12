@@ -1,4 +1,7 @@
 services:
-#    istorm_admin_ext.example:
-#        class: Istorm\AdminExtBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    istorm_admin_ext.admin_extension:
+        class: Istorm\AdminExtBundle\Twig\AdminExtension
+        arguments: []
+        tags:
+            -  { name: twig.extension }
+
