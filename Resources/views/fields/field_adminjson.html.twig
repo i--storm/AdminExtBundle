@@ -3,8 +3,22 @@
         {% for key, data in admin_json_decode(value) %}
             <tr>
                 <td>{{ key|trans }}</td>
-                <td>{{ data }}</td>
+                <td>{{ _self.recursiveValue(data) }}</td>
             </tr>
         {% endfor %}
     </table>
 {% endspaceless %}
+
+
+{% macro recursiveValue(val) %}
+    {% if is_array(val) %}
+        <table class="table">
+            {% for key, data in val %}
+                <td>{{ key|trans }}</td>
+                <td>{{ _self.recursiveValue(data) }}</td>
+            {% endfor %}
+        </table>
+    {% else %}
+        {{ val }}
+    {% endif %}
+{% endmacro %}
