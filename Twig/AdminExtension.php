@@ -17,6 +17,7 @@ class AdminExtension extends Twig_Extension
         return array(
             new \Twig_SimpleFunction('admin_json_decode', array($this, 'jsonDecode'), array('is_safe' => array('html'))),
             new \Twig_SimpleFunction('is_array', array($this, 'isArray'), array('is_safe' => array('html'))),
+            new \Twig_SimpleFunction('is_numeric', array($this, 'isNumeric'), array('is_safe' => array('html'))),
         );
     }
 
@@ -33,8 +34,8 @@ class AdminExtension extends Twig_Extension
         return is_array($val);
     }
 
-    public function printData($data){
-
+    public function isNumeric($data){
+        return is_numeric($data);
     }
 
 }

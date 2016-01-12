@@ -12,13 +12,14 @@
 
 {% macro recursiveValue(val) %}
     {% if is_array(val) %}
-        <table class="table">
+        <ul>
             {% for key, data in val %}
-                <td>{{ key|trans }}</td>
-                <td>{{ _self.recursiveValue(data) }}</td>
+                <li>{{ _self.recursiveValue(data) }}</li>
             {% endfor %}
-        </table>
-    {% else %}
+        </ul>
+    {% elseif is_numeric(val) %}
         {{ val }}
+    {% else %}
+        {{ val|trans }}
     {% endif %}
 {% endmacro %}
