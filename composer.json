@@ -12,7 +12,7 @@
         }       
     ],
     "require": {
-        "javiereguiluz/easyadmin-bundle": "dev-master#2689177"
+        "javiereguiluz/easyadmin-bundle": "dev-master#2689177|1.15.2"
     },
     "autoload": {
         "psr-4": { "Istorm\\Bundle\\AdminExtBundle\\": "" }
